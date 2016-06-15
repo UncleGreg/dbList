@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ListaModelStoreContainer" CdmEntityContainer="ListaEntities">
+    <EntitySetMapping Name="TabelaListas">
+      <EntityTypeMapping TypeName="ListaModel.TabelaLista">
+        <MappingFragment StoreEntitySet="TabelaLista">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="imiePierwsze" ColumnName="imiePierwsze" />
+          <ScalarProperty Name="imieDrugie" ColumnName="imieDrugie" />
+          <ScalarProperty Name="nazwisko" ColumnName="nazwisko" />
+          <ScalarProperty Name="nazwiskoRodowe" ColumnName="nazwiskoRodowe" />
+          <ScalarProperty Name="ulica" ColumnName="ulica" />
+          <ScalarProperty Name="numerDomu" ColumnName="numerDomu" />
+          <ScalarProperty Name="numerMieszkania" ColumnName="numerMieszkania" />
+          <ScalarProperty Name="kod" ColumnName="kod" />
+          <ScalarProperty Name="miasto" ColumnName="miasto" />
+          <ScalarProperty Name="dataUrodzenia" ColumnName="dataUrodzenia" />
+          <ScalarProperty Name="miejsceUrodzenia" ColumnName="miejsceUrodzenia" />
+          <ScalarProperty Name="pesel" ColumnName="pesel" />
+          <ScalarProperty Name="nip" ColumnName="nip" />
+          <ScalarProperty Name="imieOjca" ColumnName="imieOjca" />
+          <ScalarProperty Name="imieMatki" ColumnName="imieMatki" />
+          <ScalarProperty Name="nazwiskoMatki" ColumnName="nazwiskoMatki" />
+          <ScalarProperty Name="plec" ColumnName="plec" />
+          <ScalarProperty Name="dokumentTyp" ColumnName="dokumentTyp" />
+          <ScalarProperty Name="dokumentWydany" ColumnName="dokumentWydany" />
+          <ScalarProperty Name="dokumentNumer" ColumnName="dokumentNumer" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="wyksztalcenie" ColumnName="wyksztalcenie" />
+          <ScalarProperty Name="obywatelstwo" ColumnName="obywatelstwo" />
+          <ScalarProperty Name="narodowosc" ColumnName="narodowosc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

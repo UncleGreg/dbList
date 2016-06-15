@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ListaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TabelaLista">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="imiePierwsze" Type="nvarchar" MaxLength="50" />
+          <Property Name="imieDrugie" Type="nvarchar" MaxLength="50" />
+          <Property Name="nazwisko" Type="nvarchar" MaxLength="50" />
+          <Property Name="nazwiskoRodowe" Type="nvarchar" MaxLength="50" />
+          <Property Name="ulica" Type="nvarchar" MaxLength="50" />
+          <Property Name="numerDomu" Type="nvarchar" MaxLength="50" />
+          <Property Name="numerMieszkania" Type="nvarchar" MaxLength="50" />
+          <Property Name="kod" Type="nvarchar" MaxLength="50" />
+          <Property Name="miasto" Type="nvarchar" MaxLength="50" />
+          <Property Name="dataUrodzenia" Type="date" />
+          <Property Name="miejsceUrodzenia" Type="nvarchar" MaxLength="50" />
+          <Property Name="pesel" Type="nvarchar" MaxLength="50" />
+          <Property Name="nip" Type="nvarchar" MaxLength="50" />
+          <Property Name="imieOjca" Type="nvarchar" MaxLength="50" />
+          <Property Name="imieMatki" Type="nvarchar" MaxLength="50" />
+          <Property Name="nazwiskoMatki" Type="nvarchar" MaxLength="50" />
+          <Property Name="plec" Type="nvarchar" MaxLength="50" />
+          <Property Name="dokumentTyp" Type="nvarchar" MaxLength="50" />
+          <Property Name="dokumentWydany" Type="nvarchar" MaxLength="50" />
+          <Property Name="dokumentNumer" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="telefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="wyksztalcenie" Type="nvarchar" MaxLength="50" />
+          <Property Name="obywatelstwo" Type="nvarchar" MaxLength="50" />
+          <Property Name="narodowosc" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ListaModelStoreContainer">
+          <EntitySet Name="TabelaLista" EntityType="Self.TabelaLista" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ListaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TabelaLista">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="imiePierwsze" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="imieDrugie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nazwiskoRodowe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ulica" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="numerDomu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="numerMieszkania" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="miasto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dataUrodzenia" Type="DateTime" Precision="0" />
+          <Property Name="miejsceUrodzenia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="pesel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="imieOjca" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="imieMatki" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nazwiskoMatki" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="plec" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dokumentTyp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dokumentWydany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="dokumentNumer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="wyksztalcenie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="obywatelstwo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="narodowosc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ListaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TabelaListas" EntityType="Self.TabelaLista" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ListaModelStoreContainer" CdmEntityContainer="ListaEntities">
+          <EntitySetMapping Name="TabelaListas">
+            <EntityTypeMapping TypeName="ListaModel.TabelaLista">
+              <MappingFragment StoreEntitySet="TabelaLista">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="imiePierwsze" ColumnName="imiePierwsze" />
+                <ScalarProperty Name="imieDrugie" ColumnName="imieDrugie" />
+                <ScalarProperty Name="nazwisko" ColumnName="nazwisko" />
+                <ScalarProperty Name="nazwiskoRodowe" ColumnName="nazwiskoRodowe" />
+                <ScalarProperty Name="ulica" ColumnName="ulica" />
+                <ScalarProperty Name="numerDomu" ColumnName="numerDomu" />
+                <ScalarProperty Name="numerMieszkania" ColumnName="numerMieszkania" />
+                <ScalarProperty Name="kod" ColumnName="kod" />
+                <ScalarProperty Name="miasto" ColumnName="miasto" />
+                <ScalarProperty Name="dataUrodzenia" ColumnName="dataUrodzenia" />
+                <ScalarProperty Name="miejsceUrodzenia" ColumnName="miejsceUrodzenia" />
+                <ScalarProperty Name="pesel" ColumnName="pesel" />
+                <ScalarProperty Name="nip" ColumnName="nip" />
+                <ScalarProperty Name="imieOjca" ColumnName="imieOjca" />
+                <ScalarProperty Name="imieMatki" ColumnName="imieMatki" />
+                <ScalarProperty Name="nazwiskoMatki" ColumnName="nazwiskoMatki" />
+                <ScalarProperty Name="plec" ColumnName="plec" />
+                <ScalarProperty Name="dokumentTyp" ColumnName="dokumentTyp" />
+                <ScalarProperty Name="dokumentWydany" ColumnName="dokumentWydany" />
+                <ScalarProperty Name="dokumentNumer" ColumnName="dokumentNumer" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="wyksztalcenie" ColumnName="wyksztalcenie" />
+                <ScalarProperty Name="obywatelstwo" ColumnName="obywatelstwo" />
+                <ScalarProperty Name="narodowosc" ColumnName="narodowosc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
