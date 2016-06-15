@@ -264,6 +264,7 @@ label:after {
 }
 #dane{
     padding-bottom:0px;
+     display: none;
 }
 .waves-effect {
     position: relative;
@@ -334,7 +335,7 @@ h2{
     margin-top: 80px;
 }
 td{
-    
+    border-top: 1px solid #dddddd;
     padding-left:20px !important;
     vertical-align:central !important;
 }
@@ -363,16 +364,19 @@ td{
 .bt4{
     background:#EC644B !important;
 }
-#footer {
-    
-    color: white; 
-    text-align: center;
-    line-height: 3em;
-}
-#footer {
-    clear: both;
+
+html {
     position: relative;
-    z-index: 10;
-    height: 3em;
-    margin-top: 8em;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 100px;
+}
+footer {
+    position: absolute;  
+    bottom: 0;
+    height: 100px;
+    width: 70%;
+    margin: 0 auto;
+    text-align:right;
 }
