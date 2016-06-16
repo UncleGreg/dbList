@@ -1,0 +1,307 @@
+﻿@model ListaProjekt.Models.TabelaLista
+
+@{
+    ViewBag.Title = "Details";
+
+}
+<script src=@Url.Content("~/Scripts/jquery-3.0.0.min.js") type="text/javascript"></script>
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/main.css" rel="stylesheet" />
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#dane").hide();
+        $(".bt1").click(function () {
+            if ($("#dane").is(":hidden") == true) {
+                $("#dane").slideDown();
+            } else {
+                $("#dane").slideUp();
+            }
+        })
+    });
+    $(document).ready(function () {
+        $(".kontakt").hide();
+        $(".btnkontakt").click(function () {
+            if ($(".kontakt").is(":hidden") == true) {
+                $(".kontakt").slideDown();
+            } else {
+                $(".kontakt").slideUp();
+            }
+        })
+    });
+</script>
+
+
+<div class="card">
+    <div class="headLine"></div>
+    <div class="avGen">
+        <div class="avatarArea">
+            
+            <img src="~/images/team3.jpg" class="avatar" />
+        </div>
+        
+        <div class="gender"><i class="fa fa-mars icn-title" icn-title></i></div>
+    </div>
+
+    <div class="content">
+
+        <div class="name">
+            @Html.DisplayFor(model => model.imiePierwsze)
+            @Html.DisplayFor(model => model.imieDrugie)
+            @Html.DisplayFor(model => model.nazwisko)
+        </div>
+        <a class="bt1 waves-effect waves-light btn">Szczegóły</a>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card" id="dane">
+    <div>
+        <div class="contact adres col-md-4">
+            <i class="fa fa-home" style="font-size:18px"></i>
+            ul.@Html.DisplayFor(model => model.ulica)
+            @Html.DisplayFor(model => model.numerDomu),
+            @Html.DisplayFor(model => model.kod)
+            @Html.DisplayFor(model => model.miasto)
+        </div>
+
+        <div class=" c1 contact email col-md-4">
+            <i class="fa fa-envelope" style="font-size:18px"></i>
+            @Html.DisplayFor(model => model.email)
+        </div>
+
+
+        <div class="contact telefon col-md-4">
+            <i class="fa fa-phone" style="font-size:18px"></i>
+            @Html.DisplayFor(model => model.telefon)
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="row">
+        <section class="view col-md-6">
+            <h3 class="title with-icon">
+                <i class="fa fa-user icn-title" icn-title>
+                </i>Dane podstawowe
+            </h3>
+
+
+            <div class="container mainArea">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Imiona</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.imiePierwsze)
+                        @Html.DisplayFor(model => model.imieDrugie)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Nazwisko</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.nazwisko)
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Nazwisko rodowe</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.nazwiskoRodowe)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Data urodzenia</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.dataUrodzenia)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Miejsce urodzenia</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.miejsceUrodzenia)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="view col-md-6">
+            <h3 class="title with-icon">
+                <i class="fa fa-file-text icn-title" icn-title>
+                </i>Dane dodatkowe
+            </h3>
+
+
+            <div class="container mainArea">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>PESEL</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.pesel)
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>NIP</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.nip)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Wykształcenie</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.wyksztalcenie)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Obywatelstwo</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.obywatelstwo)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Narodowość</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.narodowosc)
+                    </div>
+                </div>
+            </div>
+        </section>
+</div> 
+
+    <div class="line1"></div> 
+
+    <div class="row">
+
+        <section class="view col-md-6">
+            <h3 class="title with-icon">
+                <i class="fa fa-credit-card icn-title" icn-title>
+                </i>Dokument tożsamości
+            </h3>
+
+
+            <div class="container mainArea">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Typ</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.dokumentTyp)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Wydany przez</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.dokumentWydany)
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Numer</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.dokumentNumer)
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="view col-md-6">
+            <h3 class="title with-icon">
+                <i class="fa fa-users icn-title" icn-title>
+                </i>Rodzice
+            </h3>
+
+
+            <div class="container mainArea">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Imię ojca</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.imieOjca)
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Imię matki</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.imieMatki)
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Nazwisko matki</label>
+                    </div>
+                    <div class="col-sm-6">
+                        @Html.DisplayFor(model => model.nazwiskoMatki)
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+    
+
+    <button class ="bt1 waves-effect waves-light btn" type="button" onclick="location.href='@Url.Action("Index")'">
+    <span><i class="fa fa-long-arrow-left"></i></span>
+    <small>Lista</small></button>
+
+    <button class="bt1 waves-effect waves-light btn" type="button" onclick="location.href='@Url.Action("Edit", new { id = Model.id })'">
+        <span><i class="fa fa-edit"></i></span>
+        <small>Edytuj</small>
+    </button>
+    
+ 
+    <div class="headLine"></div>
+</div>
+
+

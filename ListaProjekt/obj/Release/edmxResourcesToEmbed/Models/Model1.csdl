@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ListaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TabelaLista">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="imiePierwsze" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="imieDrugie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nazwiskoRodowe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ulica" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="numerDomu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="numerMieszkania" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="miasto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dataUrodzenia" Type="DateTime" Precision="0" />
+    <Property Name="miejsceUrodzenia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="pesel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nip" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="imieOjca" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="imieMatki" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nazwiskoMatki" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="plec" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dokumentTyp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dokumentWydany" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="dokumentNumer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="wyksztalcenie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="obywatelstwo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="narodowosc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="ListaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TabelaListas" EntityType="Self.TabelaLista" />
+  </EntityContainer>
+</Schema>

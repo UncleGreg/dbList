@@ -1,0 +1,228 @@
+﻿@model ListaProjekt.Models.TabelaLista
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Usuń użytkownika</h2>
+
+
+<div class="delete">
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.imiePierwsze)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imiePierwsze)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imieDrugie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imieDrugie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nazwisko)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nazwisko)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nazwiskoRodowe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nazwiskoRodowe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ulica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ulica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numerDomu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numerDomu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numerMieszkania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numerMieszkania)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.miasto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.miasto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dataUrodzenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dataUrodzenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.miejsceUrodzenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.miejsceUrodzenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pesel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pesel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imieOjca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imieOjca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imieMatki)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imieMatki)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nazwiskoMatki)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nazwiskoMatki)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.plec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.plec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dokumentTyp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dokumentTyp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dokumentWydany)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dokumentWydany)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dokumentNumer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dokumentNumer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.wyksztalcenie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.wyksztalcenie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.obywatelstwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.obywatelstwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.narodowosc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.narodowosc)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Usuń" class="btn btn-default" /> 
+            <button class="bt1 waves-effect waves-light btn" type="button" onclick="location.href='@Url.Action("Index")'">
+                
+                <small>Wróć</small>
+            </button>  
+        </div>
+        
+    }
+</div>

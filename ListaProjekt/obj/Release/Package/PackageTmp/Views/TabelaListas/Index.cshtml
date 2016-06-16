@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ListaProjekt.Models.TabelaLista>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h2>Lista użytkowników</h2>
+
+<div class="tbl">
+    <div class="headLine"></div>
+    <table class="table">
+        <tr>
+            <th>
+                Imię
+            </th>
+
+            <th>
+                Nazwisko
+            </th>
+
+            <th width="20%">
+                Miasto
+            </th>
+
+            <th width="20%">
+                E-mail
+            </th>
+            <th width="15%">
+                Telefon
+            </th>
+
+            <th class="buttons" width="150px"></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.imiePierwsze)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.nazwisko)
+                </td>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.miasto)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.telefon)
+                </td>
+
+                <td class="buttons">
+                    <button class="btn2 bt2 waves-effect waves-light btn" type="button" onclick="location.href='@Url.Action("Details", new { id = item.id })'"><i class="tblicon fa fa-eye"></i></button>
+                    <button class="btn2 bt3 waves-effect waves-light btn" type="button" onclick="location.href='@Url.Action("Edit", new { id = item.id })'"><i class="tblicon fa fa-pencil"></i></button>
+                    <button class="btn2 bt4 waves-effect waves-light btn" type="button" onclick="location.href='@Url.Action("Delete", new { id = item.id })'"><i class="tblicon fa fa-times"></i></button>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+    <button class="bt1 waves-effect waves-light btn" type="button" onclick="location.href='@Url.Action("Create")'">
+        <span><i class="fa fa-plus"></i></span>
+        <small>Nowy</small>
+    </button>
+

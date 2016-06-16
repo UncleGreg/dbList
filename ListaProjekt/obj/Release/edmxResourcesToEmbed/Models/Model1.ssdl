@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ListaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TabelaLista">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="imiePierwsze" Type="nvarchar" MaxLength="50" />
+    <Property Name="imieDrugie" Type="nvarchar" MaxLength="50" />
+    <Property Name="nazwisko" Type="nvarchar" MaxLength="50" />
+    <Property Name="nazwiskoRodowe" Type="nvarchar" MaxLength="50" />
+    <Property Name="ulica" Type="nvarchar" MaxLength="50" />
+    <Property Name="numerDomu" Type="nvarchar" MaxLength="50" />
+    <Property Name="numerMieszkania" Type="nvarchar" MaxLength="50" />
+    <Property Name="kod" Type="nvarchar" MaxLength="50" />
+    <Property Name="miasto" Type="nvarchar" MaxLength="50" />
+    <Property Name="dataUrodzenia" Type="date" />
+    <Property Name="miejsceUrodzenia" Type="nvarchar" MaxLength="50" />
+    <Property Name="pesel" Type="nvarchar" MaxLength="50" />
+    <Property Name="nip" Type="nvarchar" MaxLength="50" />
+    <Property Name="imieOjca" Type="nvarchar" MaxLength="50" />
+    <Property Name="imieMatki" Type="nvarchar" MaxLength="50" />
+    <Property Name="nazwiskoMatki" Type="nvarchar" MaxLength="50" />
+    <Property Name="plec" Type="nvarchar" MaxLength="50" />
+    <Property Name="dokumentTyp" Type="nvarchar" MaxLength="50" />
+    <Property Name="dokumentWydany" Type="nvarchar" MaxLength="50" />
+    <Property Name="dokumentNumer" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="telefon" Type="nvarchar" MaxLength="50" />
+    <Property Name="wyksztalcenie" Type="nvarchar" MaxLength="50" />
+    <Property Name="obywatelstwo" Type="nvarchar" MaxLength="50" />
+    <Property Name="narodowosc" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="ListaModelStoreContainer">
+    <EntitySet Name="TabelaLista" EntityType="Self.TabelaLista" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
